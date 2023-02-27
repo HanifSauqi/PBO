@@ -1,20 +1,26 @@
 import java.util.Scanner;
 
-public class Assigment2 {
-    public static void main (String[] args){
+public class Main {
+    public static void main(String[] args) {
+        Scanner barang = new Scanner(System.in);
+        System.out.print("banyak mainan ditoko : ");
+        int main = barang.nextInt();
 
-        Scanner scan = new Scanner (System.in);
-        System.out.println("Masukkan banyak mainan yang dibeli : ");
-
+        Scanner scan = new Scanner(System.in);
+        System.out.print("banyak mainan yang dibeli : ");
         int mainan = scan.nextInt();
-        int sisa = mainan%3;
 
-        if (sisa > 0){
-            System.out.println("Mainan sisa : "+1);
+
+        if (main > mainan) {
+            System.out.println("mainan yang dibeli : " + mainan);
+            System.out.println("Mainan sisa : " + main % mainan );
+        }
+        if (main < mainan) {
+            System.out.println("Mainan di toko hanya terisa : " + main );
         }
         else {
-            System.out.println("Mainan pas");
+            System.out.println("mainan yang dibeli : " + mainan);
+            System.out.println("Mainan di toko habis");
         }
     }
-
 }
